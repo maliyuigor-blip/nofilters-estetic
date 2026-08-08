@@ -347,6 +347,11 @@
     .hero__stamp{width:86px;height:86px;font-size:11px}
     .gallery__grid{grid-template-columns:1fr 1fr}
   }
+
+  /* Hide ticker and marquee on mobile to avoid overflow and distraction */
+  @media (max-width:860px){
+    .ticker, .marquee { display: none !important; }
+  }
 </style>
 </head>
 <body>
