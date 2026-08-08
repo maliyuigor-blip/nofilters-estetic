@@ -245,6 +245,84 @@
     .ticker__track,.marquee__track,.hero__badge,.hero__stamp{animation:none}
   }
 
+
+  /* ---------- mobile menu ---------- */
+  .mobile-menu{
+    position:fixed;inset:0;z-index:80;display:flex;align-items:flex-start;justify-content:flex-end;
+    pointer-events:none;opacity:0;transition:opacity .3s var(--ease-out);
+  }
+  .mobile-menu.open{opacity:1;pointer-events:auto}
+  .mobile-menu__backdrop{
+    position:absolute;inset:0;background:rgba(11,31,42,.6);backdrop-filter:blur(4px);
+    transform:translateX(100%);transition:transform .3s var(--ease-out);
+  }
+  .mobile-menu.open .mobile-menu__backdrop{transform:translateX(0)}
+  .mobile-menu__panel{
+    position:relative;width:100%;max-width:340px;min-height:100vh;
+    background:var(--paper);border-left:1px solid var(--line);
+    padding:24px 24px 40px;display:flex;flex-direction:column;
+    transform:translateX(100%);transition:transform .35s var(--ease-out);
+    box-shadow:-20px 0 60px -20px rgba(11,31,42,.3);
+  }
+  .mobile-menu.open .mobile-menu__panel{transform:translateX(0)}
+  .mobile-menu__header{display:flex;align-items:center;justify-content:space-between;margin-bottom:32px}
+  .mobile-menu__brand{color:var(--ink);text-decoration:none}
+  .mobile-menu__brand b{font-family:'Prata',serif;font-size:17px}
+  .mobile-menu__brand i{font-style:normal;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+  .mobile-menu__close{width:40px;height:40px;border-radius:12px;border:1px solid var(--line);background:var(--card);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s}
+  .mobile-menu__close:hover{background:var(--ink);color:var(--paper)}
+  .mobile-menu__nav{display:flex;flex-direction:column;gap:8px;margin-bottom:24px;flex:1}
+  .mobile-menu__nav a{font-size:18px;font-weight:700;color:var(--ink);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--line);transition:color .2s}
+  .mobile-menu__nav a:hover{color:var(--accent)}
+  .mobile-menu__cta{width:100%;margin-bottom:24px;text-align:center}
+  .mobile-menu__meta{display:flex;flex-direction:column;gap:12px;font-size:13.5px;color:var(--muted);padding-top:16px;border-top:1px solid var(--line)}
+  .mobile-menu__meta a{color:var(--muted);text-decoration:none}
+  .mobile-menu__meta a:hover{color:var(--accent)}
+  .mobile-menu__meta i{font-style:normal;color:var(--accent)}
+
+  /* Fix ticker/marquee overflow on mobile */
+  @media (max-width:860px){
+    .ticker,.marquee{overflow:hidden}
+    .ticker__track,.marquee__track{animation:none}
+    .ticker span,.marquee b{display:none}
+  }
+
+  /* Improve hero on mobile */
+  @media (max-width:560px){
+    .hero{padding:72px 0 48px}
+    .hero__grid{gap:32px}
+    .hero h1{font-size:clamp(34px,8vw,54px)}
+    .hero__lead{font-size:15px}
+    .hero__row{gap:10px}
+    .btn{padding:15px 24px;font-size:14px}
+    .hero__stats{margin-top:32px;border-radius:14px}
+    .hero__stat{padding:14px 16px}
+    .hero__stat b{font-size:22px}
+    .hero__badge{left:12px;bottom:-16px;padding:14px 16px}
+    .hero__stamp{width:72px;height:72px;font-size:10px}
+    .hero__imgwrap{border-radius:18px;aspect-ratio:4/4.5}
+  }
+
+  /* Better touch targets on mobile */
+  @media (max-width:860px){
+    .cta{padding:14px 28px;font-size:14px}
+    .mobile-menu__cta{padding:16px 28px;font-size:15px}
+    .mobile-menu__nav a{padding:18px 0}
+    .service__body{padding:22px}
+    .review{padding:24px}
+  }
+
+  /* Ensure no horizontal overflow from animations */
+  html,body{overflow-x:clip}
+  .ticker,.marquee{overflow-x:clip}
+
+  /* Fix hero badge positioning on small screens */
+  @media (max-width:400px){
+    .hero__badge{left:8px;padding:12px 14px}
+    .hero__badge b{font-size:20px}
+    .hero__badge span{font-size:10px;max-width:90px}
+  }
+
   /* ---------- responsive ---------- */
   @media (max-width:1024px){
     .hero__grid{grid-template-columns:1fr;gap:44px}
@@ -294,6 +372,35 @@
     </button>
   </div>
 </header>
+<!-- MOBILE MENU PANEL -->
+<div id="mmenu" class="mobile-menu" aria-hidden="true" role="dialog" aria-label="Мобільне меню">
+  <div class="mobile-menu__backdrop" aria-hidden="true"></div>
+  <div class="mobile-menu__panel">
+    <div class="mobile-menu__header">
+      <div class="brand mobile-menu__brand"><b>NOFILTERS</b><i>естетичний центр</i></div>
+      <button class="mobile-menu__close" aria-label="Закрити меню">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-menu__nav">
+      <a href="#services">Послуги</a>
+      <a href="#about">Про нас</a>
+      <a href="#gallery">Роботи</a>
+      <a href="#reviews">Відгуки</a>
+      <a href="#contact">Контакти</a>
+    </nav>
+    <a href="tel:+380684560888" class="mobile-menu__cta btn btn--solid">Записатися: 068 456 0888</a>
+    <div class="mobile-menu__meta">
+      <span><i>★</i> 5.0 · 437 відгуків</span>
+      <span>вул. Сахарова, 5Б, Одеса</span>
+      <a href="https://instagram.com/nofilters_od" target="_blank" rel="noopener">@nofilters_od</a>
+    </div>
+  </div>
+</div>
+
 
 <main>
 
@@ -507,6 +614,52 @@
 
 <script>
 (function(){
+  var burger=document.getElementById('burger');
+  var mobileMenu=document.getElementById('mmenu');
+  var closeBtn=mobileMenu ? mobileMenu.querySelector('.mobile-menu__close') : null;
+  var backdrop=mobileMenu ? mobileMenu.querySelector('.mobile-menu__backdrop') : null;
+  var links=mobileMenu ? mobileMenu.querySelectorAll('.mobile-menu__nav a') : [];
+  var open=false;
+
+  function setOpen(v){
+    open=v;
+    burger.classList.toggle('open',open);
+    burger.setAttribute('aria-expanded',open);
+    mobileMenu.classList.toggle('open',open);
+    mobileMenu.setAttribute('aria-hidden',!open);
+    document.body.style.overflow=open?'hidden':'';
+  }
+
+  if(burger){
+    burger.addEventListener('click',function(){setOpen(!open);});
+  }
+  if(closeBtn){
+    closeBtn.addEventListener('click',function(){setOpen(false);});
+  }
+  if(backdrop){
+    backdrop.addEventListener('click',function(){setOpen(false);});
+  }
+  links.forEach(function(l){
+    l.addEventListener('click',function(){setOpen(false);});
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape' && open){setOpen(false);}
+  });
+
+  var reveals=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}
+      });
+    },{threshold:0.12});
+    reveals.forEach(function(el){io.observe(el);});
+  }else{
+    reveals.forEach(function(el){el.classList.add('visible');});
+  }
+})();
   var burger=document.getElementById('burger');
   var nav=document.querySelector('.nav');
   var open=false;
