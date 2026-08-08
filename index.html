@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NOFILTERS Естетичний Центр — манікюр, подологія, макіяж в Одесі</title>
+  <meta name="description" content="NOFILTERS — естетичний центр в Одесі: професійний манікюр, подологія та макіяж. 5.0★ (437 відгуків). Запис: 068 456 0888. вул. Сахарова, 5Б.">
+  <link rel="canonical" href="https://maliyuigor-blip.github.io/nofilters-estetic/">
+  <meta property="og:title" content="NOFILTERS Естетичний Центр — ваш салон краси в Одесі">
+  <meta property="og:description" content="Манікюр, подологія, макіяж. 5.0★ (437 відгуків). вул. Сахарова, 5Б.">
+  <meta property="og:image" content="https://maliyuigor-blip.github.io/nofilters-estetic/assets/hero.jpg">
+  <meta property="og:url" content="https://maliyuigor-blip.github.io/nofilters-estetic/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="uk_UA">
+  <meta name="twitter:card" content="summary_large_image">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fafafa;
+      --surface: #ffffff;
+      --fg: #1a1a1a;
+      --muted: #666666;
+      --accent: #8b5cf6;
+      --accent-soft: #ddd6fe;
+      --border: #e5e5e5;
+    }
+    html { scroll-behavior: smooth; font-synthesis: none; }
+    body { font-family: 'Montserrat', sans-serif; background: var(--bg); color: var(--fg); }
+    h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; }
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .hero-img { background-image: url('assets/hero.jpg'); background-size: cover; background-position: center; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { transition: none; transform: none; opacity: 1; }
+      html { scroll-behavior: auto; }
+    }
+    #mobile-menu {
+      position: fixed;
+      inset: 0;
+      background: rgba(250,250,250,0.95);
+      backdrop-filter: blur(8px);
+      z-index: 50;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      pointer-events: none;
+    }
+    #mobile-menu.menu-open { transform: translateX(0); }
+    #mobile-menu[aria-hidden="true"] { pointer-events: none; }
+    #mobile-menu[aria-hidden="false"] { pointer-events: all; }
+  </style>
+</head>
+<body class="antialiased">
+<a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-black text-white px-4 py-2 rounded-full z-50">Skip to content</a>
+
+<nav class="fixed top-0 left-0 right-0 z-50 bg-[var(--bg)]/80 backdrop-blur-md border-b border-[var(--border)]">
+  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="#" class="text-xl font-semibold tracking-tight">NOFILTERS</a>
+    <div class="hidden md:flex items-center gap-8 text-sm">
+      <a href="#services" class="hover:text-[var(--accent)] transition">Послуги</a>
+      <a href="#about" class="hover:text-[var(--accent)] transition">Про нас</a>
+      <a href="#contact" class="hover:text-[var(--accent)] transition">Контакти</a>
+      <a href="tel:+380684560888" class="bg-[var(--accent)] text-white px-5 py-2.5 rounded-full text-sm hover:opacity-90 transition active:scale-95">Записатися</a>
+    </div>
+    <button id="burger" class="md:hidden w-10 h-10 flex items-center justify-center rounded-full hover:bg-[var(--border)] transition active:scale-95" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</nav>
+
+<div id="mobile-menu" class="fixed inset-0 z-40 bg-[var(--bg)] menu-closed transition-transform duration-300 md:hidden" aria-hidden="true">
+  <div class="p-6 pt-20 space-y-6 text-lg">
+    <a href="#services" class="mobile-link block">Послуги</a>
+    <a href="#about" class="mobile-link block">Про нас</a>
+    <a href="#contact" class="mobile-link block">Контакти</a>
+    <a href="tel:+380684560888" class="mobile-link block text-[var(--accent)]">068 456 0888</a>
+  </div>
+</div>
+
+<main id="main">
+
+<section class="relative min-h-[92vh] flex items-center hero-img">
+  <div class="absolute inset-0 bg-black/40"></div>
+  <div class="relative z-10 max-w-5xl mx-auto px-6 text-white">
+    <p class="text-sm tracking-[0.25em] uppercase mb-4 text-white/80">Одеса • Естетичний Центр</p>
+    <h1 class="text-5xl md:text-7xl font-semibold leading-[0.95] mb-6 text-balance">NOFILTERS</h1>
+    <p class="text-lg md:text-xl font-light text-white/90 max-w-2xl mb-10">Естетичний центр краси та здоров'я. Професійний манікюр, подологія, макіяж. 6 років успіху.</p>
+    <div class="flex flex-wrap gap-4">
+      <a href="tel:+380684560888" class="inline-block bg-white text-black px-8 py-4 rounded-full font-medium hover:bg-[#e7e5e4] transition active:scale-95">Записатися: 068 456 0888</a>
+      <a href="#services" class="inline-block border border-white/80 text-white px-8 py-4 rounded-full font-medium hover:bg-white/10 transition">Послуги</a>
+    </div>
+    <div class="mt-10 flex items-center gap-3 text-white/90 text-sm">
+      <span class="inline-flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-full"><span class="text-yellow-300">★</span> 5.0</span>
+      <span>437 відгуків</span>
+      <span class="text-white/50">|</span>
+      <span>вул. Сахарова, 5Б, Одеса</span>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="py-24 bg-white">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="max-w-2xl reveal">
+      <p class="text-sm tracking-[0.2em] uppercase text-[var(--muted)] mb-3">Послуги</p>
+      <h2 class="text-4xl md:text-5xl font-semibold mb-6">Що ми робимо</h2>
+      <p class="text-[var(--muted)] leading-relaxed">Комплексний естетичний центр: від nail care до повноцінних spa-процедур. Кожен майстер — спеціаліст у своїй ніші.</p>
+    </div>
+    <div class="mt-14 grid md:grid-cols-3 gap-6">
+      <article class="reveal group rounded-2xl overflow-hidden border border-[var(--bg)]">
+        <div class="h-64 overflow-hidden">
+          <img src="assets/manicure.jpg" alt="Манікюр" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+        </div>
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2">Манікюр</h3>
+          <p class="text-[var(--muted)] text-sm leading-relaxed">Професійний манікюр та педикюр. Гель-лак, апаратний манікюр, SPA-процедури для рук та нігтів.</p>
+        </div>
+      </article>
+      <article class="reveal group rounded-2xl overflow-hidden border border-[var(--bg)]">
+        <div class="h-64 overflow-hidden">
+          <img src="assets/manicure.jpg" alt="Подологія" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+        </div>
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2">Подологія</h3>
+          <p class="text-[var(--muted)] text-sm leading-relaxed">Медичний педикюр, лікування врослих нігтів, грибка, тріщин. Сучасні методи та препарати.</p>
+        </div>
+      </article>
+      <article class="reveal group rounded-2xl overflow-hidden border border-[var(--bg)]">
+        <div class="h-64 overflow-hidden">
+          <img src="assets/manicure2.jpg" alt="Макіяж" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+        </div>
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2">Макіяж</h3>
+          <p class="text-[var(--muted)] text-sm leading-relaxed">Вечірній, денний, весільний макіяж. Професійна косметика, індивідуальний підбір тонів.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="py-24 bg-[var(--bg)]">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-14 items-center">
+      <div class="reveal">
+        <p class="text-sm tracking-[0.2em] uppercase text-[var(--muted)] mb-3">Про центр</p>
+        <h2 class="text-4xl md:text-5xl font-semibold mb-6">NOFILTERS Естетичний Центр</h2>
+        <p class="text-[var(--muted)] leading-relaxed mb-4">NOFILTERS — це команда професіоналів, які об'єднують косметологію, манікюр та макіяж. Ми прагнемо до естетичної гармонії без фільтрів — ваша природна краса, підвищена професійною турботою.</p>
+        <p class="text-[var(--muted)] leading-relaxed mb-8">Святкуємо 6 років успіху в Одесі. Наш девіз: «Красота без прикрас» — бо ви вже прекрасні.</p>
+        <div class="flex items-center gap-6">
+          <div>
+            <p class="text-3xl font-semibold">5.0</p>
+            <p class="text-sm text-[var(--muted)]">рейтинг</p>
+          </div>
+          <div class="w-px h-10 bg-[var(--border)]"></div>
+          <div>
+            <p class="text-3xl font-semibold">437</p>
+            <p class="text-sm text-[var(--muted)]">відгуків</p>
+          </div>
+          <div class="w-px h-10 bg-[var(--border)]"></div>
+          <div>
+            <p class="text-3xl font-semibold">3</p>
+            <p class="text-sm text-[var(--muted)]">напрямки</p>
+          </div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="rounded-2xl overflow-hidden border border-[var(--border)]">
+          <img src="assets/hero.jpg" alt="NOFILTERS Естетичний Центр" class="w-full h-80 object-cover">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-24 bg-white">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="max-w-2xl reveal">
+      <p class="text-sm tracking-[0.2em] uppercase text-[var(--muted)] mb-3">Контакти</p>
+      <h2 class="text-4xl md:text-5xl font-semibold mb-6">Запис та консультація</h2>
+      <p class="text-[var(--muted)] leading-relaxed mb-10">Зв'яжіться з нами для запису або безкоштовної консультації. Відповідаємо протягом 30 хвилин у робочий день.</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-10 reveal">
+      <div class="space-y-6">
+        <div>
+          <p class="text-xs uppercase tracking-widest text-[var(--muted)] mb-2">Телефон</p>
+          <a href="tel:+380684560888" class="text-2xl font-semibold hover:text-[var(--accent)] transition">068 456 0888</a>
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-widest text-[var(--muted)] mb-2">Адреса</p>
+          <p class="text-lg font-medium">вул. Сахарова, 5Б, Одеса</p>
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-widest text-[var(--muted)] mb-2">Instagram</p>
+          <a href="https://instagram.com/nofilters_od" class="text-lg font-semibold hover:text-[var(--accent)] transition">@nofilters_od</a>
+        </div>
+      </div>
+      <div>
+        <iframe src="https://www.google.com/maps?q=вул.+Сахарова,+5Б,+Одеса&output=embed" class="w-full h-72 rounded-2xl border-0" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="py-10 bg-[var(--fg)] text-white/70 text-center text-sm">
+  <p>© 2026 NOFILTERS Естетичний Центр. Всі права захищені.</p>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const burger = document.getElementById('burger');
+    const menu = document.getElementById('mobile-menu');
+    const links = document.querySelectorAll('.mobile-link');
+    if (!burger || !menu) { console.error('Burger or menu element not found'); return; }
+    burger.addEventListener('click', function() {
+      const isOpen = menu.classList.toggle('menu-open');
+      menu.classList.toggle('menu-closed', !isOpen);
+      burger.setAttribute('aria-expanded', String(isOpen));
+      menu.setAttribute('aria-hidden', String(!isOpen));
+    });
+    links.forEach(function(link) {
+      link.addEventListener('click', function() {
+        menu.classList.remove('menu-open');
+        menu.classList.add('menu-closed');
+        burger.setAttribute('aria-expanded', 'false');
+        menu.setAttribute('aria-hidden', 'true');
+      });
+    });
+    const revealEls = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+      }, { threshold: 0.12 });
+      revealEls.forEach(function(el) { io.observe(el); });
+    } else {
+      revealEls.forEach(function(el) { el.classList.add('visible'); });
+    }
+  });
+</script>
+</body>
+</html>
